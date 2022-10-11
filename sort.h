@@ -7,22 +7,22 @@
 /**
  * struct listint_s - Doubly linked list node
  * @n: Integer stored in the node
- * @prev: Pointe to the previous elements in the list
+ * @prev: Pointer to the previous element of the list
  * @next: Pointer to the next element of the list
- */
-typedef struce listint_s
+*/
+typedef struct listint_s
 {
-	const int  n;
+	const int n;
 	struct listint_s *prev;
 	struct listint_s *next;
 } listint_t;
 
 void bubble_sort(int *array, size_t size);
-void insertion_sort_list(listint **list);
+void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void quickSort(int *array, int low_index, int high_index, size_t size);
-int partition(int *array, int low_Index, int high_Index, size_t size);
+int partition(int *array, int lowIndex, int highIndex, size_t size);
 
 void print_array(int *array, size_t size);
 void print_list(const listint_t *list);
