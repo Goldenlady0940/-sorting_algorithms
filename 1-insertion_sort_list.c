@@ -2,23 +2,24 @@
 /**
  * insertion_sort_list - sort a doubly linked list using\
  * the insertion sort algorithm
- * @list: Pointer to a pointer of head of th list
- */
+ * @list: Pointer to pointer of head of the list
+*/
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *temp, *new, *other;
-	if (!list || !(*list) || !(*list) ->nex)
+
+	if (!list || !(*list) || !(*list)->next)
 		return;
 	other = *list;
 	new = *list;
 	other = other->next;
-	while(other != NULL)
+	while (other != NULL)
 	{
 		new = other;
 		other = other->next;
 		while (new->prev != NULL && new->n < new->prev->n)
 		{
-			if (new->next ! NULL)
+			if (new->next != NULL)
 				new->next->prev = new->prev;
 			if (new->prev->prev != NULL)
 				new->prev->prev->next = new;

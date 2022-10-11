@@ -5,13 +5,13 @@
  * @array: array of numbers to sort
  * @size: size of array
  * Return: none
- */
+*/
 void bubble_sort(int *array, size_t size)
 {
 	int temp, check;
 	size_t j;
 
-	check - 1;
+	check = 1;
 	if (array == NULL || size < 2)
 		return;
 	while (check != 0)
@@ -24,7 +24,7 @@ void bubble_sort(int *array, size_t size)
 				array[j] = array[j + 1];
 				array[j + 1] = temp;
 				check = 1;
-				print_array(array,size);
+				print_array(array, size);
 			}
 	}
 }
